@@ -1,4 +1,4 @@
-import { exercises } from '../beecrowd/index.js';
+import { exercises } from '../beecrowd/exercises.js';
 
 const getRandomExercise = () => {
     const id = exercises.beginner[Math.floor(Math.random() * exercises.beginner.length)];        

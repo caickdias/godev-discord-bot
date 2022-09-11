@@ -1,10 +1,10 @@
 import { getRandomExercise } from "./helpers.js";
+import { GET_RANDOM_EXERCISE } from './actions.js';
 
 const getResponse = (command) => {
     switch(command){
-        case 'exercicio':
-            return getRandomExercise();
-            break;
+        case GET_RANDOM_EXERCISE:
+            return getRandomExercise();            
         default:
             return 'Nada encontrado';
     }

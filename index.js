@@ -20,9 +20,7 @@ client.on("messageCreate", (message) => {
     if(!message.content.startsWith(PREFIX) 
         || message.author.bot 
         || message.channelId != process.env.LISTEN_CHANNEL_ID
-    ) return;
-    
-    console.log(message.channelId);
+    ) return;        
 
     const args = message.content.slice(PREFIX.length);    
 
