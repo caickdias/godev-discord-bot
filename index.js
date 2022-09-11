@@ -17,8 +17,13 @@ const client = new Client({
 });
 
 client.on("messageCreate", (message) => {
-    if(!message.content.startsWith(PREFIX) || message.author.bot) return;
+    if(!message.content.startsWith(PREFIX) 
+        || message.author.bot 
+        || message.channelId != process.env.LISTEN_CHANNEL_ID
+    ) return;
     
+    console.log(message.channelId);
+
     const args = message.content.slice(PREFIX.length);    
 
     const reply = getResponse(args);
