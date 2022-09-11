@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv';
 import { Client, GatewayIntentBits } from "discord.js";
 
-import { getResponse } from './utils/responseCases.js'
+import { getResponse } from './src/utils/responseCases.js'
 
 dotenv.config();
 
